@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#11121a" />
+  <title>Готов ли ты стать лидером группы?</title>
+  <link rel="stylesheet" href="test.css" />
+</head>
+<body>
+  <main class="shell">
+    <div class="topline">
+      <span class="stamp">Отдел кадровой аномалии</span>
+      <div class="top-actions"><span>Версия 2.0 / здравый смысл не найден</span><button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">☀️ Светлая тема</button></div>
+    </div>
+
+    <header class="hero">
+      <div class="eyebrow">Тест на управленческую пригодность</div>
+      <h1>Готов ли ты стать <span>лидером группы?</span></h1>
+      <p class="intro">На кону — судьба коллектива, честь голубей и должность, которую никто не просил. Отвечай честно: тест оценивает не столько навыки, сколько способность организовать хаос и не потерять протокол.</p><div class="daily-quote"><span class="quote-mark">“</span><div><span class="quote-label">СЛУЧАЙНАЯ МУДРОСТЬ КОМИССИИ</span><p id="dailyQuote">Если план А не сработал, в алфавите ещё 32 буквы. Некоторые из них — голуби.</p></div><button type="button" class="quote-refresh" id="quoteRefresh" aria-label="Новая мудрость">↻</button></div>
+      <div class="disclaimer" role="note">
+        <div class="warning-icon">!</div>
+        <div><strong>Важно: абсурд — только в тесте.</strong> Опасные и незаконные пункты существуют исключительно как мемы, выдуманные сценарии или безопасные симуляции. Не пей бензин, не трогай радиоактивные материалы, не причиняй никому вреда и не совершай преступлений. За реальные опасные действия баллы не начисляются. Медицинские анализы не бывают «на оценку» — здесь имеется в виду учебный тест о ВИЧ и профилактике.</div>
+      </div>
+    </header>
+
+    <section class="dashboard" aria-label="Прогресс теста">
+      <div class="progress-copy"><span class="num" id="answeredCount">0</span><span>из <span id="totalCount">30</span> ответов</span></div>
+      <div class="score-side"><div class="score-tease" id="progressMessage">Группа пока держится на честном слове.</div><div class="live-score" id="liveScore">0 баллов набрано</div></div>
+      <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+    </section>
+
+    <form id="quizForm" novalidate>
+      <div id="questionSections"></div>
+      <div class="actions">
+        <button class="primary" type="submit" id="submitButton" disabled>Определить судьбу коллектива ↗</button>
+        <button class="secondary" type="button" id="randomButton">🎲 Случайный вопрос</button><button class="secondary" type="button" id="resetButton">Начать заново</button>
+        <p class="status-note" id="statusNote" aria-live="polite">Для вынесения вердикта ответь на все пункты.</p>
+      </div>
+    </form>
+
+    <section class="result" id="result" tabindex="-1" aria-live="polite">
+      <div class="result-kicker">Официальное заключение комиссии</div>
+      <h2 id="resultTitle">Верховный староста реальности</h2>
+      <p class="result-desc" id="resultDesc"></p>
+      <div class="score-row">
+        <div class="score-number" id="scoreNumber">90</div>
+        <div>
+          <div class="score-caption">БАЛЛОВ ИЗ 90</div>
+          <div class="result-meter" aria-label="Доля набранных баллов"><span id="resultMeterFill"></span></div>
+        </div>
+      </div>
+      <div class="verdict" id="verdict"></div><div class="breakdown" id="breakdown"><h3>Отчёт по отделам</h3><p class="breakdown-intro">Где твой управленческий гений особенно громко шумел.</p><div id="breakdownRows"></div></div>
+      <div class="result-actions">
+        <button class="primary" type="button" id="copyButton">Скопировать вердикт</button>
+        <button class="secondary" type="button" id="editButton">Изменить ответы</button>
+        <button class="secondary" type="button" id="shareButton">Поделиться результатом</button><button class="secondary" type="button" id="downloadButton">Скачать отчёт .txt</button><button class="secondary" type="button" id="printButton">Печать / PDF</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Сертифицировано институтом сомнительных решений.</span>
+      <span>Все совпадения с реальными руководителями случайны и тревожны.</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
